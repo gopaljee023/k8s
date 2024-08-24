@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod1
+  labels:
+    app.kubernetes.io/name: all-nginx-label
+    my.first.app: frontend
+spec:
+  containers:
+    - name: nginx-app
+      image: nginx:latest
+      ports:
+        - containerPort: 80
+
